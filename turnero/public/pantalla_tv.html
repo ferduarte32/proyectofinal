@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pantalla TV - Turnos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styletv.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="left-panel">
+      <img src="assets/logo/tulogo.png" alt="Logo" class="logo" />
+      <h2>Turno Actual</h2>
+      <div id="turno-numero" class="turno-numero">--</div>
+      <div id="turno-nombre" class="turno-nombre">Esperando...</div>
+      <div id="turno-puesto" class="turno-puesto"></div>
+    </div>
+    <div class="right-panel">
+      <div class="card clima">
+        <h3>Clima en Paraná Entre rios </h3>
+        <div id="weather-info">Cargando...</div>
+      </div>
+      <div class="card video">
+       <iframe id="video-institucional" width="100%" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1"
+          frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div id="alerta" class="alerta"></div>
+
+  <script src="js/tv.js?v=3"></script>
+</body>
+
+</html>

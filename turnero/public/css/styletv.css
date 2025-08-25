@@ -1,0 +1,76 @@
+/* public/css/styletv.css */
+
+.container {
+  display: flex;
+  height: 100vh;
+  background-color: #F8F9FA;
+}
+.left-panel {
+  flex: 1;
+  background: white;
+  padding: 40px;
+  border-right: 5px solid #005BAC;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.left-panel .logo {
+  margin-bottom: 20px;
+}
+.left-panel h2 {
+  color: #005BAC;
+  margin-bottom: 20px;
+}
+.turno-numero {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 10px;
+}
+.turno-nombre {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #005BAC;
+  margin-bottom: 5px;
+}
+.turno-motivo {
+  font-size: 1.2rem;
+  color: #333333;
+}
+.right-panel {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.card {
+  background: white;
+  border: 1px solid #DDDDDD;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.card h3 {
+  color: #005BAC;
+  margin-bottom: 10px;
+}
+.alerta {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #E5007A;
+  color: white;
+  padding: 25px 40px;
+  font-size: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.alerta.mostrar {
+  opacity: 1;
+}

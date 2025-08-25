@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel de Operadores</title>
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="assets/logo/gigared_logo.png" alt="Gigared" height="40"/>
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="sacar_turno.html">Sacar Turno</a></li>
+          <li><a href="panel_operadores.html" class="active">Panel Operadores</a></li>
+          <li><a href="reporte_operador.html">Reportes</a></li>
+          <li><a href="admin/gestion_puestos.php">Administración</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Panel de Operadores</h1>
+    <table class="table" id="tabla-turnos">
+      <thead>
+        <tr>
+          <th># Turno</th>
+          <th>Nombre</th>
+          <th>Motivo</th>
+          <th>Espera (min)</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="turnos-body">
+        <!-- Aquí inyecta JS -->
+      </tbody>
+    </table>
+
+    <!-- Modal para derivar turno -->
+    <div id="modal-derivar" class="modal">
+      <div class="modal-content">
+        <span class="close" id="close-derivar">&times;</span>
+        <h2>Derivar Turno</h2>
+        <label for="select-puesto-derivar">Seleccione puesto destino:</label>
+        <select id="select-puesto-derivar"></select>
+        <button id="btn-confirm-derivar" class="button">Confirmar</button>
+      </div>
+    </div>
+
+    <!-- Modal para finalizar turno -->
+    <div id="modal-finalizar" class="modal">
+      <div class="modal-content">
+        <span class="close" id="close-finalizar">&times;</span>
+        <h2>Finalizar Turno</h2>
+        <label for="select-resultado">Resultado:</label>
+        <select id="select-resultado">
+          <option value="cumplido">Cumplido</option>
+          <option value="pendiente">Pendiente</option>
+          <option value="cancelado">Cancelado</option>
+          <option value="otro">Otro</option>
+        </select>
+        <textarea id="observaciones" placeholder="Observaciones (opcional)"></textarea>
+        <button id="btn-confirm-finalizar" class="button">Finalizar</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Gigared. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Importá siempre con rutas relativas a partir de /turnero/public/ -->
+<script src="js/operador.js?v=<?= filemtime('js/operador.js') ?>"></script>
+
+</body>
+</html>

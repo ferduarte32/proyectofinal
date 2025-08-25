@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sacar Turno</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="assets/logo/gigared_logo.png" alt="Gigared" height="40" />
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="sacar_turno.html" class="active">Sacar Turno</a></li>
+          <li><a href="panel_operadores.html">Panel Operadores</a></li>
+          <li><a href="reporte_operador.html">Reportes</a></li>
+          <li><a href="login.php">Administración</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Sacar Turno</h1>
+    <form id="form-turno">
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
+      </div>
+      <div class="form-group">
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required />
+      </div>
+      <div class="form-group">
+        <label for="motivo">Motivo:</label>
+        <select id="motivo" name="motivo_id" required>
+          <option value="">Seleccione motivo</option>
+        </select>
+      </div>
+      <button type="submit" class="button">Sacar turno</button>
+    </form>
+    <div id="resultado" class="result"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; Fercode.com. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

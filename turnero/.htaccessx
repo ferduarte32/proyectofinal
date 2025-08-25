@@ -1,0 +1,25 @@
+RewriteEngine On
+
+# ——————————————————————————————
+# 1) Excepciones: deja pasar estas rutas de AJAX
+RewriteRule ^src/admin/get_motivos\.php$           - [L]
+RewriteRule ^src/turno/crear_turno\.php$           - [L]
+RewriteRule ^src/turno/derivar_turno\.php$          - [L]
+RewriteRule ^src/turno/finalizar_turno\.php$        - [L]
+RewriteRule ^src/turno/llamar_turno\.php$           - [L]
+RewriteRule ^src/turno/obtener_pendientes\.php$     - [L]
+RewriteRule ^src/turno/ultimo_turno_llamado\.php$   - [L]
+
+# ——————————————————————————————
+# 2) Bloquear todo lo demás en src/, config/, logs/
+RewriteRule ^(src|config|logs)(/|$) - [F,L]
+
+# ——————————————————————————————
+# 3) Redirigir todo lo público a /public/
+RewriteCond %{REQUEST_URI} !^/turnero/public/
+RewriteRule ^(.*)$ /turnero/public/$1 [L,NC]
+
+# ——————————————————————————————
+Options -Indexes
+ErrorDocument 403 /turnero/public/403.html
+ErrorDocument 404 /turnero/public/404.html
